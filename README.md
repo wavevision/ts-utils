@@ -1,5 +1,9 @@
 # Wavevision TypeScript Utils
 
+[![Build Status](https://travis-ci.org/wavevision/ts-utils.svg?branch=master)](https://travis-ci.org/wavevision/ts-utils)
+[![Coverage Status](https://coveralls.io/repos/github/wavevision/ts-utils/badge.svg?branch=master)](https://coveralls.io/github/wavevision/ts-utils?branch=master)
+[![npm](https://img.shields.io/npm/v/@wavevision/ts-utils)](https://www.npmjs.com/package/@wavevision/ts-utils)
+
 Set of useful TypeScript utilities and helpers.
 
 ## Installation
