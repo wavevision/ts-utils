@@ -1244,10 +1244,10 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@wavevision/coding-standard@^2.1.6":
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/@wavevision/coding-standard/-/coding-standard-2.1.6.tgz#81de4534929a333e623fcb3ee95df2fc30dc5715"
-  integrity sha512-gNSTlW5gRsT1IK1A/fWdBI3/6nfMGozxx6tDJQra9pLPyUSWslU/6jApE1PmEuCQPZOPt4WUhRY3Awk+n4OlCg==
+"@wavevision/coding-standard@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@wavevision/coding-standard/-/coding-standard-3.0.1.tgz#17117af255056bf21bdeb3c2045e37fc65d40745"
+  integrity sha512-AJKLRiXiA66NhG9or8YVmOoHm77UqjqrrNzNtULFp5thNZwzc4mDkitmfRmlyqaqCy3aGxMwJoFl0efKOTcisA==
   dependencies:
     "@babel/core" "^7.7.2"
     "@babel/plugin-proposal-class-properties" "^7.7.0"
