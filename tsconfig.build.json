@@ -3,7 +3,8 @@
   "compilerOptions": {
     "declaration": true,
     "noEmit": false,
-    "outDir": "dist"
+    "outDir": "dist",
+    "resolveJsonModule": false
   },
-  "exclude": ["./src/**/tests/**/*"]
+  "exclude": ["./bin/**/*", "./src/**/tests/**/*"]
 }

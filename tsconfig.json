@@ -3,8 +3,7 @@
   "compilerOptions": {
     "allowJs": false,
     "module": "commonjs",
-    "resolveJsonModule": false,
     "target": "es5"
   },
-  "include": ["./*.js", "./src/**/*"]
+  "include": ["./*.js", "./bin/**/*", "./src/**/*"]
 }
