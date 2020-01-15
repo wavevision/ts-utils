@@ -25,7 +25,7 @@ npm install --save @wavevision/ts-utils
 The package contains useful functions for:
 
 - [components](./src/components) – get `displayName` of a React component with fallback for unknown
-- [dom](./src/dom) – create data attributes, get typed elements by various selectors etc.
+- [dom](./src/dom) – create data attributes, get typed elements by various selectors
 - [numbers](./src/numbers) – generate numeric IDs, format floats
 - [strings](./src/strings) – generate random strings, format, capitalize, shallow stringify objects
 - [type](./src/type) – type safe checkers
