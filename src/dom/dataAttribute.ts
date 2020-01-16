@@ -16,18 +16,15 @@ const dataAttribute = (attribute: string, prefix?: string): DataAttribute => {
     if (typeof v !== 'undefined') currentValue = `${v}`;
     return currentValue;
   };
-  const asObject: DataAttribute['asObject'] = v => {
-    value(v);
-    return { [currentName]: currentValue };
-  };
+  const asObject: DataAttribute['asObject'] = v => ({
+    [currentName]: value(v),
+  });
   const assign: DataAttribute['assign'] = e => {
     e.setAttribute(currentName, currentValue);
     return e;
   };
-  const asString: DataAttribute['asString'] = v => {
-    value(v);
-    return `${currentName}="${currentValue}"`;
-  };
+  const asString: DataAttribute['asString'] = v =>
+    `${currentName}="${value(v)}"`;
   const name: DataAttribute['name'] = () => currentName;
   return {
     asObject,
