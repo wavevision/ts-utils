@@ -1,6 +1,6 @@
 export interface DataAttribute {
   readonly asObject: (value?: unknown) => { [K: string]: string };
-  readonly assign: <T extends HTMLElement = HTMLElement>(element: T) => T;
+  readonly assign: <T extends Element = Element>(element: T) => T;
   readonly asString: (value?: unknown) => string;
   readonly name: () => string;
   readonly toString: () => string;
