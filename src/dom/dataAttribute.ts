@@ -1,3 +1,5 @@
+import camelCaseToDashCase from '../strings/camelCaseToDashCase';
+
 export interface DataAttribute {
   readonly asObject: (value?: unknown) => { [K: string]: string };
   readonly assign: <T extends Element = Element>(element: T) => T;
@@ -8,6 +10,7 @@ export interface DataAttribute {
 }
 
 const dataAttribute = (attribute: string, prefix?: string): DataAttribute => {
+  attribute = camelCaseToDashCase(attribute);
   const currentName = prefix
     ? `data-${prefix}-${attribute}`
     : `data-${attribute}`;
