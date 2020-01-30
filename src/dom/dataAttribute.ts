@@ -10,10 +10,9 @@ export interface DataAttribute {
 }
 
 const dataAttribute = (attribute: string, prefix?: string): DataAttribute => {
-  attribute = camelCaseToDashCase(attribute);
-  const currentName = prefix
-    ? `data-${prefix}-${attribute}`
-    : `data-${attribute}`;
+  const currentName = camelCaseToDashCase(
+    prefix ? `data-${prefix}-${attribute}` : `data-${attribute}`,
+  );
   let currentValue = '';
   const value: DataAttribute['value'] = v => {
     if (typeof v !== 'undefined') currentValue = `${v}`;
