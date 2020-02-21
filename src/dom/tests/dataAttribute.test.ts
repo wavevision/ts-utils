@@ -39,6 +39,14 @@ describe('ts-utils/dom/dataAttribute', () => {
         expect(test.name()).toEqual('data-prefix-attribute');
       });
     });
+    describe('remove', () => {
+      it('removes data attribute from an element', () => {
+        const element = document.createElement('div');
+        test.assign(element);
+        expect(test.assign(element).hasAttribute(test.name())).toBe(true);
+        expect(test.remove(element).hasAttribute(test.name())).toBe(false);
+      });
+    });
     describe('value', () => {
       it('sets and returns current value', () => {
         expect(test.value()).toBe('something');

@@ -44,8 +44,8 @@
     "typescript": "^3.7.4"
   },
   "peerDependencies": {
-    "@types/node": "^13.1.6",
-    "@types/react": "^16.9.17"
+    "@types/node": "^13.1",
+    "@types/react": "^16.9"
   },
   "scripts": {
     "build": "NODE_ENV=production run-s clean ts:build package",

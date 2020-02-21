@@ -5,6 +5,7 @@ export interface DataAttribute {
   readonly assign: <T extends Element = Element>(element: T) => T;
   readonly asString: (value?: unknown) => string;
   readonly name: () => string;
+  readonly remove: <T extends Element = Element>(element: T) => T;
   readonly toString: () => string;
   readonly value: (value?: unknown) => string;
 }
@@ -28,11 +29,16 @@ const dataAttribute = (attribute: string, prefix?: string): DataAttribute => {
   const asString: DataAttribute['asString'] = v =>
     `${currentName}="${value(v)}"`;
   const name: DataAttribute['name'] = () => currentName;
+  const remove: DataAttribute['remove'] = e => {
+    e.removeAttribute(currentName);
+    return e;
+  };
   return {
     asObject,
     assign,
     asString,
     name,
+    remove,
     toString: () => asString(),
     value,
   };
