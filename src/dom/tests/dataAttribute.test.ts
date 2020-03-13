@@ -22,8 +22,7 @@ describe('ts-utils/dom/dataAttribute', () => {
     describe('assign', () => {
       it('assigns data attribute to an element', () => {
         const element = document.createElement('div');
-        test.assign(element);
-        expect(element.getAttribute('data-prefix-attribute')).toEqual('false');
+        expect(test.get(test.assign(element))).toEqual('false');
       });
     });
     describe('asString', () => {
@@ -32,6 +31,16 @@ describe('ts-utils/dom/dataAttribute', () => {
         expect(test.asString('something')).toEqual(
           'data-prefix-attribute="something"',
         );
+      });
+    });
+    describe('get', () => {
+      it('returns value of a data attribute on an element', () => {
+        expect(test.get(document.createElement('div'))).toBe(null);
+      });
+    });
+    describe('has', () => {
+      it('returns whether an element has a data attribute', () => {
+        expect(test.has(document.createElement('div'))).toBe(false);
       });
     });
     describe('name', () => {
@@ -43,8 +52,20 @@ describe('ts-utils/dom/dataAttribute', () => {
       it('removes data attribute from an element', () => {
         const element = document.createElement('div');
         test.assign(element);
-        expect(test.assign(element).hasAttribute(test.name())).toBe(true);
-        expect(test.remove(element).hasAttribute(test.name())).toBe(false);
+        expect(test.has(test.assign(element))).toBe(true);
+        expect(test.has(test.remove(element))).toBe(false);
+      });
+    });
+    describe('toString', () => {
+      it('formats data attribute as string', () => {
+        expect(String(test)).toEqual('data-prefix-attribute="something"');
+      });
+    });
+    describe('toJSON', () => {
+      it('serializes data attribute for JSON format', () => {
+        expect(JSON.stringify(test)).toEqual(
+          '{"data-prefix-attribute":"something"}',
+        );
       });
     });
     describe('value', () => {
