@@ -9,11 +9,20 @@ const DIST = resolve(ROOT, 'dist');
 const COPY = ['LICENSE', 'README.md'];
 
 const run = (): void => {
-  delete pkg.scripts;
-  delete pkg.types;
-  pkg.main = 'index.js';
   COPY.forEach(file => copyFileSync(resolve(ROOT, file), resolve(DIST, file)));
-  writeFileSync(resolve(DIST, 'package.json'), JSON.stringify(pkg, null, 2));
+  writeFileSync(
+    resolve(DIST, 'package.json'),
+    JSON.stringify(
+      {
+        ...pkg,
+        main: 'index.js',
+        scripts: undefined,
+        types: undefined,
+      },
+      null,
+      2,
+    ),
+  );
 };
 
 run();
