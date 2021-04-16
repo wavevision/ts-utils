@@ -1,6 +1,6 @@
 {
   "name": "@wavevision/ts-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Useful TypeScript utilities and helpers.",
   "keywords": [
     "typescript",
