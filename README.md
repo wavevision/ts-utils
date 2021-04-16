@@ -1,7 +1,7 @@
 <p align="center"><a href="https://github.com/wavevision"><img alt="Wavevision s.r.o." src="https://wavevision.com/images/wavevision-logo.png" width="120" /></a></p>
 <h1 align="center">TypeScript Utils</h1>
 
-[![Build Status](https://travis-ci.org/wavevision/ts-utils.svg?branch=master)](https://travis-ci.org/wavevision/ts-utils)
+[![CI](https://github.com/wavevision/ts-utils/workflows/CI/badge.svg)](https://github.com/wavevision/ts-utils/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/wavevision/ts-utils/badge.svg?branch=master)](https://coveralls.io/github/wavevision/ts-utils?branch=master)
 [![npm](https://img.shields.io/npm/v/@wavevision/ts-utils)](https://www.npmjs.com/package/@wavevision/ts-utils)
 
